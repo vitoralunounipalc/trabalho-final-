@@ -1,0 +1,167 @@
+/* ===== Estilo do Site Inteiro ===== */
+body {
+    font-family: "Arial", sans-serif;
+}
+
+/* ===== Título Principal ===== */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ===== Imagens do Site ===== */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== Barra Laranja de Navegação ===== */
+.navbar {
+    background-color: #ee7c18;
+    padding: 10px 0;
+}
+
+/* ===== Lista com os Itens do Menu (horizontal) ===== */
+.navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Espaçamento entre os Itens do Menu ===== */
+.navbar-item {
+    margin: 0 15px;
+}
+
+/* ===== Estilo dos Links do Menu ===== */
+.navbar-link {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    color: #ff0202;
+    text-align: center;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+/* ===== Efeito Quando Passa o Mouse nos Links ===== */
+.navbar-link:hover {
+    background-color: #e07625;
+    color: #ffffff;
+}
+
+/* ===== Link do Carrinho (ícone) ===== */
+.navbar-link.cart-icon-link {
+    padding: 8px 15px;
+}
+
+/* ===== Ícone do Carrinho ===== */
+.navbar-link.cart-icon-link::before {
+    content: "";
+    display: inline-block;
+    width: 60px;  /* Tamanho do ícone aumentado */
+    height: 30px;
+    background-image: url('.img/shopping-cart_4896295.png'); /* Caminho da imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-right: 0;
+}
+
+/* ===== Efeito Hover no Ícone do Carrinho ===== */
+.navbar-link.cart-icon-link:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+/* ===== Imagem dos Produtos ===== */
+.product-item img {
+    width: 160px;     /* Largura da imagem */
+    height: 160px;    /* Altura da imagem */
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Container que deixa os produtos lado a lado ===== */
+.products-container {
+    display: flex;
+    flex-wrap: wrap; /* permite que os produtos "quebrem" para a próxima linha */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ===== Estilo de cada produto ===== */
+.product-item {
+    flex: 1 1 calc(25% - 20px); /* 4 por linha com gap considerado */
+    max-width: calc(25% - 20px); /* impede que mais de 4 caibam na linha */
+    min-width: 250px; /* ajuda a manter layout responsivo */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* ===== Preço e botão lado a lado ===== */
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.add-to-cart {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+/* ===== Responsividade para telas menores ===== */
+@media (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-item {
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
