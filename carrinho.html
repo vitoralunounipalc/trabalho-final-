@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- CONFIGURAÇÕES BÁSICAS DA PÁGINA -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Meu Carrinho de Compras</title>
+
+    <!-- LINK PARA O ARQUIVO DE ESTILOS (CSS EXTERNO) -->
     <link rel="stylesheet" href="css.css" />
 </head>
 <body>
 
+    <!-- 🔵 MENU DE NAVEGAÇÃO PRINCIPAL -->
     <nav class="navbar">
         <ul class="navbar-list">
-            <li class="navbar-item"><a href="index.html" class="navbar-link">🛍️ Continuar Comprando</a></li>
+            <!-- LINK PARA VOLTAR À LOJA -->
+            <li class="navbar-item">
+                <a href="index.html" class="navbar-link">🛍️ Continuar Comprando</a>
+            </li>
+            <!-- LINKS DO MENU -->
             <li class="navbar-item"><a href="#about" class="navbar-link">Sobre</a></li>
             <li class="navbar-item"><a href="#services" class="navbar-link">Serviços</a></li>
             <li class="navbar-item"><a href="#contact" class="navbar-link">Contato</a></li>
+
+            <!-- LINK PARA O CARRINHO COM ÍCONE E CONTADOR -->
             <li class="navbar-item">
-                <a href="carrinho.html" class="navbar-link cart-icon-link">🛒 Carrinho (<span id="cart-count">0</span>)</a>
+                <a href="carrinho.html" class="navbar-link cart-icon-link">
+                    🛒 Carrinho (<span id="cart-count">0</span>)
+                </a>
             </li>
         </ul>
     </nav>
 
+    <!-- 🔵 CONTEÚDO PRINCIPAL DA PÁGINA -->
     <main>
+
+        <!-- TÍTULO DA PÁGINA -->
         <h1 style="text-align: center; margin-top: 30px;">Seu Carrinho de Compras</h1>
 
+        <!-- 🔸 ÁREA DOS ITENS DO CARRINHO -->
         <div class="cart-items-container">
-            <p id="empty-cart-message" style="text-align: center; font-style: italic; color: #666; margin-top: 20px;">Seu carrinho está vazio.</p>
-            
+            <!-- MENSAGEM EXIBIDA QUANDO O CARRINHO ESTÁ VAZIO -->
+            <p id="empty-cart-message" style="text-align: center; font-style: italic; color: #666; margin-top: 20px;">
+                Seu carrinho está vazio.
+            </p>
+
+            <!-- TABELA DOS PRODUTOS DO CARRINHO (INICIALMENTE ESCONDIDA) -->
             <table id="cart-table" style="width: 100%; border-collapse: collapse; margin-top: 20px; display: none;">
                 <thead>
                     <tr>
@@ -35,16 +55,25 @@
                     </tr>
                 </thead>
                 <tbody id="cart-items-body">
-                    </tbody>
+                    <!-- OS ITENS VÃO SER ADICIONADOS AQUI PELO JAVASCRIPT -->
+                </tbody>
             </table>
         </div>
 
+        <!-- 🔸 RESUMO DO CARRINHO (TOTAL + BOTÃO LIMPAR) -->
         <div class="cart-summary" style="text-align: right; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: none;">
+            <!-- TOTAL DA COMPRA -->
             <h2>Total da Compra: <span id="cart-total">R$ 0,00</span></h2>
-            <button id="clear-cart-button" style="background-color: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Limpar Carrinho</button>
+
+            <!-- BOTÃO PARA LIMPAR TODO O CARRINHO -->
+            <button id="clear-cart-button" style="background-color: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+                Limpar Carrinho
+            </button>
         </div>
+
     </main>
 
+    <!-- 🔵 IMPORTAÇÃO DO SCRIPT QUE CONTROLA O CARRINHO -->
     <script src="carrinho.js"></script>
 </body>
 </html>

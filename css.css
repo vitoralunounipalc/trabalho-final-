@@ -150,25 +150,10 @@ img {
 .add-to-cart:hover {
     background-color: #2980b9;
 }
-
-/* ===== Responsividade (funciona bem em celular) ===== */
-@media (max-width: 768px) {
-    /* Produtos em coluna no celular */
-    .products-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Produto ocupa mais espaço na tela pequena */
+  /* Produto ocupa mais espaço na tela pequena */
     .product-item {
         width: 90%;
         max-width: 300px;
     }
 
-    /* Menu vira coluna no celular */
-    .navbar-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-}
+    

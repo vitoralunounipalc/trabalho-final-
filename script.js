@@ -1,19 +1,22 @@
-// Define a chave usada para armazenar o carrinho no navegador (localStorage)
+// =========================
+// Chave de armazenamento no navegador
+// =========================
 const CART_STORAGE_KEY = 'meuEcommerceCarrinho';
 
-// Quando a página for carregada completamente
+// =========================
+// Ações iniciais ao carregar a página
+// =========================
 document.addEventListener('DOMContentLoaded', () => {
-    // Atualiza o número de itens exibido no ícone do carrinho
+    // Atualiza o número de itens no ícone do carrinho
     updateCartIconCount();
 
-    // Seleciona todos os botões de "Adicionar ao Carrinho"
+    // Seleciona todos os botões "Adicionar ao Carrinho"
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
-    // Para cada botão encontrado...
+    // Adiciona eventos de clique aos botões
     addToCartButtons.forEach(button => {
-        // Adiciona um evento de clique
         button.addEventListener('click', (event) => {
-            // Pega o nome e o preço do produto (armazenados no botão via dataset)
+            // Pega os dados do produto no botão
             const productName = event.target.dataset.name;
             const productPrice = event.target.dataset.price;
 
@@ -23,39 +26,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Função para buscar o carrinho que está salvo no navegador
+// =========================
+// Função: Buscar carrinho salvo no navegador
+// =========================
 function getCartFromStorage() {
     const cartString = localStorage.getItem(CART_STORAGE_KEY);
-    // Se existir, transforma o texto salvo em array (lista)
+    // Converte o texto salvo em array ou retorna array vazio
     return cartString ? JSON.parse(cartString) : [];
 }
 
-// Função para salvar o carrinho atualizado no navegador
+// =========================
+// Função: Salvar carrinho atualizado no navegador
+// =========================
 function saveCartToStorage(cartArray) {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartArray));
 }
 
-// Função para adicionar um novo produto ao carrinho
+// =========================
+// Função: Adicionar produto ao carrinho
+// =========================
 function addProductToCart(name, priceString) {
-    const cart = getCartFromStorage(); // pega o carrinho atual
-    const price = parseFloat(priceString); // transforma o preço em número
+    const cart = getCartFromStorage(); // Pega o carrinho atual
+    const price = parseFloat(priceString); // Converte preço para número
+
+    // Cria um novo produto com ID único
     const newProduct = {
-        // Cria um ID único para o produto, usando o nome e a hora atual
         id: name.replace(/\s+/g, '-') + '_' + Date.now(),
         name: name,
         price: price
     };
-    cart.push(newProduct); // adiciona o novo produto no carrinho
-    saveCartToStorage(cart); // salva o carrinho de volta no navegador
-    alert(`${name} foi adicionado ao carrinho!`); // mostra mensagem ao usuário
-    updateCartIconCount(); // atualiza o número de itens no ícone
+
+    // Adiciona o produto ao carrinho e salva
+    cart.push(newProduct);
+    saveCartToStorage(cart);
+
+    // Informa o usuário e atualiza o ícone do carrinho
+    alert(`${name} foi adicionado ao carrinho!`);
+    updateCartIconCount();
 }
 
-// Função para atualizar o número no ícone do carrinho
+// =========================
+// Função: Atualizar o ícone do carrinho com o número de itens
+// =========================
 function updateCartIconCount() {
     const cartCountElement = document.getElementById('cart-count');
     if (cartCountElement) {
-        const cart = getCartFromStorage(); // pega os produtos salvos
-        cartCountElement.textContent = cart.length; // mostra quantos produtos tem
+        const cart = getCartFromStorage();
+        cartCountElement.textContent = cart.length;
     }
 }

@@ -1,6 +1,7 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- CONFIGURAÇÕES BÁSICAS DA PÁGINA -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Produtos Lado a Lado</title>
@@ -8,6 +9,7 @@
 </head>
 <body>
 
+    <!-- MENU DE NAVEGAÇÃO SUPERIOR -->
     <nav class="navbar">
         <ul class="navbar-list">
             <li class="navbar-item"><a href="#home" class="navbar-link">Início</a></li>
@@ -15,83 +17,92 @@
             <li class="navbar-item"><a href="#services" class="navbar-link">Serviços</a></li>
             <li class="navbar-item"><a href="#contact" class="navbar-link">Contato</a></li>
             <li class="navbar-item">
+                <!-- ÍCONE DO CARRINHO -->
                 <a href="carrinho.html" class="navbar-link cart-icon-link">🛒 Carrinho (<span id="cart-count">0</span>)</a>
             </li>
         </ul>
     </nav>
 
+    <!-- IMAGEM PRINCIPAL DO TOPO DA PÁGINA -->
     <img src=".img/fotinho.png" alt="Descrição da imagem" class="main-image" />
 
+    <!-- CONTAINER DE PRODUTOS (TODOS FICAM LADO A LADO) -->
     <div class="products-container">
 
-    <div class="product-item">
-        <img src=".img/61yEHZXdi6L._AC_SL1280_.jpg" alt="Produto 1" />
-        <h3>Produto 1</h3>
-        <div class="product-info">
-            <p class="price">R$ 99,99</p>
-            <button class="add-to-cart" data-name="Produto 1" data-price="99.99">Adicionar</button>
+        <!-- PRODUTO 1 -->
+        <div class="product-item">
+            <img src=".img/61yEHZXdi6L._AC_SL1280_.jpg" alt="Produto 1" />
+            <h3>Produto 1</h3>
+            <div class="product-info">
+                <p class="price">R$ 99,99</p>
+                <button class="add-to-cart" data-name="Produto 1" data-price="99.99">Adicionar</button>
+            </div>
         </div>
-    </div>
 
-    <div class="product-item">
-        <img src=".img/dsc-4876-4da03532-b02b-4a99-8a0d-77d8fc2673d9.jpg" alt="Produto 2" />
-        <h3>Produto 2</h3>
-        <div class="product-info">
-            <p class="price">R$ 89,99</p>
-            <button class="add-to-cart" data-name="Produto 2" data-price="89.99">Adicionar</button>
+        <!-- PRODUTO 2 -->
+        <div class="product-item">
+            <img src=".img/dsc-4876-4da03532-b02b-4a99-8a0d-77d8fc2673d9.jpg" alt="Produto 2" />
+            <h3>Produto 2</h3>
+            <div class="product-info">
+                <p class="price">R$ 89,99</p>
+                <button class="add-to-cart" data-name="Produto 2" data-price="89.99">Adicionar</button>
+            </div>
         </div>
-    </div>
 
-    <div class="product-item">
-        <img src=".img/microsoft-surface-laptop-7-13ineli16512-win11-sc-thai-graphite-zgp-1-square_medium.jpg" alt="Produto 3" />
-        <h3>Produto 3</h3>
-        <div class="product-info">
-            <p class="price">R$ 79,99</p>
-            <button class="add-to-cart" data-name="Produto 3" data-price="79.99">Adicionar</button>
+        <!-- PRODUTO 3 -->
+        <div class="product-item">
+            <img src=".img/microsoft-surface-laptop-7-13ineli16512-win11-sc-thai-graphite-zgp-1-square_medium.jpg" alt="Produto 3" />
+            <h3>Produto 3</h3>
+            <div class="product-info">
+                <p class="price">R$ 79,99</p>
+                <button class="add-to-cart" data-name="Produto 3" data-price="79.99">Adicionar</button>
+            </div>
         </div>
-    </div>
 
-    <div class="product-item">
-        <img src=".img/Notebook-Gamer-Acer-Nitro-V-Anv15-51-7037-I7-13-gen-Linux-Gutta-16gb-512gb-SSD-RTX4050-15-6-Fhd_1749214782.webp" alt="Produto 4" />
-        <h3>Produto 4</h3>
-        <div class="product-info">
-            <p class="price">R$ 109,99</p>
-            <button class="add-to-cart" data-name="Produto 4" data-price="109.99">Adicionar</button>
+        <!-- PRODUTO 4 -->
+        <div class="product-item">
+            <img src=".img/Notebook-Gamer-Acer-Nitro-V-Anv15-51-7037-I7-13-gen-Linux-Gutta-16gb-512gb-SSD-RTX4050-15-6-Fhd_1749214782.webp" alt="Produto 4" />
+            <h3>Produto 4</h3>
+            <div class="product-info">
+                <p class="price">R$ 109,99</p>
+                <button class="add-to-cart" data-name="Produto 4" data-price="109.99">Adicionar</button>
+            </div>
         </div>
-    </div>
 
-    <div class="product-item">
-        <img src=".img/The-Reign-Handbag_Truffle-1_dadc3297-cb7b-4046-b8a0-887d950098a1.webp" alt="Produto 5" />
-        <h3>Produto 5</h3>
-        <div class="product-info">
-            <p class="price">R$ 69,99</p>
-            <button class="add-to-cart" data-name="Produto 5" data-price="69.99">Adicionar</button>
+        <!-- PRODUTO 5 -->
+        <div class="product-item">
+            <img src=".img/The-Reign-Handbag_Truffle-1_dadc3297-cb7b-4046-b8a0-887d950098a1.webp" alt="Produto 5" />
+            <h3>Produto 5</h3>
+            <div class="product-info">
+                <p class="price">R$ 69,99</p>
+                <button class="add-to-cart" data-name="Produto 5" data-price="69.99">Adicionar</button>
+            </div>
         </div>
-    </div>
 
-    <div class="product-item">
-        <img src=".img/61uTgCczoXL._AC_UF894,1000_QL80_.jpg" alt="Produto 7" />
-        <h3>Produto 7</h3>
-        <div class=".img/garrafa-de-agua.jpg">
-            <p class="price">R$ 89,99</p>
-            <button class="add-to-cart" data-name="Produto 7" data-price="89.99">Adicionar</button>
+        <!-- PRODUTO 7 -->
+        <div class="product-item">
+            <img src=".img/61uTgCczoXL._AC_UF894,1000_QL80_.jpg" alt="Produto 7" />
+            <h3>Produto 7</h3>
+            <div class="product-info"> <!-- Corrigido: estava com classe errada -->
+                <p class="price">R$ 89,99</p>
+                <button class="add-to-cart" data-name="Produto 7" data-price="89.99">Adicionar</button>
+            </div>
         </div>
-    </div>
 
-    <div class="product-item">
-        <img src=".img/ariete-585-nero-part-tazza-piedini-a4703113be01a382a2a2ad472c55cf80.jpg" alt="Produto 8" />
-        <h3>Produto 8</h3>
-        <div class="product-info">
-            <p class="price">R$ 79,99</p>
-            <button class="add-to-cart" data-name="Produto 8" data-price="79.99">Adicionar</button>
+        <!-- PRODUTO 8 -->
+        <div class="product-item">
+            <img src=".img/ariete-585-nero-part-tazza-piedini-a4703113be01a382a2a2ad472c55cf80.jpg" alt="Produto 8" />
+            <h3>Produto 8</h3>
+            <div class="product-info">
+                <p class="price">R$ 79,99</p>
+                <button class="add-to-cart" data-name="Produto 8" data-price="79.99">Adicionar</button>
+            </div>
         </div>
-    </div>
 
-    
+    </div> <!-- FIM DA LISTA DE PRODUTOS -->
 
-
-
-</div>
+    <!-- SCRIPT JAVASCRIPT PARA FUNCIONALIDADES COMO ADICIONAR AO CARRINHO -->
     <script src="script.js"></script>
+
 </body>
 </html>
