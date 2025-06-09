@@ -1,15 +1,15 @@
-/* ===== Estilo do Site Inteiro ===== */
+/* ===== Fonte do site inteiro ===== */
 body {
     font-family: "Arial", sans-serif;
 }
 
-/* ===== Título Principal ===== */
+/* ===== Título principal (h1 centralizado) ===== */
 h1 {
     text-align: center;
     margin-top: 20px;
 }
 
-/* ===== Imagens do Site ===== */
+/* ===== Estilo das imagens do site ===== */
 img {
     width: 100%;
     height: auto;
@@ -18,13 +18,13 @@ img {
     margin: 0 auto;
 }
 
-/* ===== Barra Laranja de Navegação ===== */
+/* ===== Barra laranja de navegação no topo ===== */
 .navbar {
     background-color: #ee7c18;
     padding: 10px 0;
 }
 
-/* ===== Lista com os Itens do Menu (horizontal) ===== */
+/* ===== Menu da navegação (lista dos links) ===== */
 .navbar-list {
     list-style: none;
     margin: 0;
@@ -34,12 +34,12 @@ img {
     align-items: center;
 }
 
-/* ===== Espaçamento entre os Itens do Menu ===== */
+/* ===== Espaço entre os itens do menu ===== */
 .navbar-item {
     margin: 0 15px;
 }
 
-/* ===== Estilo dos Links do Menu ===== */
+/* ===== Estilo dos links do menu ===== */
 .navbar-link {
     font-family: 'Open Sans', sans-serif;
     display: block;
@@ -49,24 +49,24 @@ img {
     text-decoration: none;
 }
 
-/* ===== Efeito Quando Passa o Mouse nos Links ===== */
+/* ===== Efeito quando passa o mouse nos links do menu ===== */
 .navbar-link:hover {
     background-color: #e07625;
     color: #ffffff;
 }
 
-/* ===== Link do Carrinho (ícone) ===== */
+/* ===== Link do carrinho (botão com ícone) ===== */
 .navbar-link.cart-icon-link {
     padding: 8px 15px;
 }
 
-/* ===== Ícone do Carrinho ===== */
+/* ===== Ícone do carrinho de compras ===== */
 .navbar-link.cart-icon-link::before {
     content: "";
     display: inline-block;
-    width: 60px;  /* Tamanho do ícone aumentado */
+    width: 60px;
     height: 30px;
-    background-image: url('.img/shopping-cart_4896295.png'); /* Caminho da imagem */
+    background-image: url('.img/shopping-cart_4896295.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -74,15 +74,15 @@ img {
     margin-right: 0;
 }
 
-/* ===== Efeito Hover no Ícone do Carrinho ===== */
+/* ===== Efeito hover no ícone do carrinho ===== */
 .navbar-link.cart-icon-link:hover {
     background-color: rgb(255, 255, 255);
 }
 
-/* ===== Imagem dos Produtos ===== */
+/* ===== Estilo das imagens dos produtos ===== */
 .product-item img {
-    width: 160px;     /* Largura da imagem */
-    height: 160px;    /* Altura da imagem */
+    width: 160px;
+    height: 160px;
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -91,20 +91,20 @@ img {
     margin-right: auto;
 }
 
-/* ===== Container que deixa os produtos lado a lado ===== */
+/* ===== Container com todos os produtos lado a lado ===== */
 .products-container {
     display: flex;
-    flex-wrap: wrap; /* permite que os produtos "quebrem" para a próxima linha */
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     padding: 20px;
 }
 
-/* ===== Estilo de cada produto ===== */
+/* ===== Cada produto (caixinha) ===== */
 .product-item {
-    flex: 1 1 calc(25% - 20px); /* 4 por linha com gap considerado */
-    max-width: calc(25% - 20px); /* impede que mais de 4 caibam na linha */
-    min-width: 250px; /* ajuda a manter layout responsivo */
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    min-width: 250px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -114,24 +114,27 @@ img {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* ===== Animação ao passar o mouse no produto ===== */
 .product-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-/* ===== Preço e botão lado a lado ===== */
+/* ===== Informações do produto (preço + botão) ===== */
 .product-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* ===== Preço do produto ===== */
 .price {
     font-size: 1.2rem;
     font-weight: bold;
     color: #e74c3c;
 }
 
+/* ===== Botão "Adicionar ao carrinho" ===== */
 .add-to-cart {
     background-color: #3498db;
     color: white;
@@ -143,22 +146,26 @@ img {
     transition: background-color 0.3s;
 }
 
+/* ===== Efeito ao passar o mouse no botão "Adicionar" ===== */
 .add-to-cart:hover {
     background-color: #2980b9;
 }
 
-/* ===== Responsividade para telas menores ===== */
+/* ===== Responsividade (funciona bem em celular) ===== */
 @media (max-width: 768px) {
+    /* Produtos em coluna no celular */
     .products-container {
         flex-direction: column;
         align-items: center;
     }
-    
+
+    /* Produto ocupa mais espaço na tela pequena */
     .product-item {
         width: 90%;
         max-width: 300px;
     }
-    
+
+    /* Menu vira coluna no celular */
     .navbar-list {
         flex-direction: column;
         align-items: center;
